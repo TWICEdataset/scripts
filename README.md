@@ -1,5 +1,7 @@
 # TWICE_dataset
 This repository contains the scripts to open files of the TWICE dataset. 
+This repository contains the updated scripts to open files of the TWICE dataset: https://github.com/TWICEdataset/scripts
+There is a python notebook named open_osi_files.ipynb that contain an example of how to manipulate the data.
 You can use these scripts to project cuboids onto frames and save them in video files.
 You can also save a single camera frame with or without the projected cuboids. 
 Additionally, a script is available for converting LiDAR data from .osi to .ply point cloud format. 
