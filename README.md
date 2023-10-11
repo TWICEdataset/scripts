@@ -18,5 +18,6 @@ TWICE <br>
 
 - Follow instructions of OSI Installation [available at here](https://www.asam.net/static_downloads/ASAM_OSI_reference-documentation_v3.5.0/index.html)
 1. pip install --upgrade google-api-python-client
+2. pip install opencv-python tqdm open3d
 
 To ensure that this script works correctly, yoou will need to change the path in the TWICE_path.txt to reflect the location of the TWICE folder on your system. (path where the folder TWICE is stored in your system)
