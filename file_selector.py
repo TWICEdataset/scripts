@@ -3,15 +3,25 @@ import os
 import pathlib
 
 
-def file_selector(scenario, weather, scenario_type, radar_mode, test_run, camera_type):
-    with open('TWICE_path.txt', 'r') as f:
-        path_twice = f.read()
-    if scenario == os.path.join("CBLA","with_car") or scenario == os.path.join("CBLA","withot_car"):
+def file_selector(path_twice, scenario, weather, scenario_type, radar_mode, test_run, camera_type):
+    """
+    returns the paths (camera_path,radar_path,ego_path,obj_path,lidar_path) 
+    according to the specified parameters (scenario, weather, scenario_type, radar_mode, test_run, camera_type)
+    path_twice is path (relative or absolute) to TWICE directory (without trailing slash)
+    TWICE/
+       Scenarios/
+       open-simulation-interface/
+       scripts/
+    """
+
+    # with open('TWICE_path.txt', 'r') as f:
+    #     path_twice = f.read()
+    if scenario == os.path.join("CBLA","with_car") or scenario == os.path.join("CBLA","without_car"):
         scenario_df = "CBLA"
     else:
         scenario_df = scenario
 
-    df = pd.read_csv(os.path.join(path_twice, 'TWICE', 'scripts', 'TWICE_df.csv'))
+    df = pd.read_csv(os.path.join(path_twice, 'scripts', 'TWICE_df.csv'))
 
     df_selected = df[(df['Scenario'] == scenario_df) & (df['Type'] == scenario_type) & (df['Radar_mode'] == radar_mode)]
     weather_list = df_selected['Weather'].tolist()
@@ -26,9 +36,9 @@ def file_selector(scenario, weather, scenario_type, radar_mode, test_run, camera
 
     # dynamic or static ego
     if scenario == 'CCRb' or scenario == os.path.join("CBLA","with_car") or scenario == os.path.join('CBLA','without_car') or scenario == 'CCRs' or scenario == 'truck_perpendicular':
-        scenario_path = os.path.join(path_twice, 'TWICE', 'Scenarios', 'dynamic_ego', scenario, scenario_type, weather, radar_mode, f'test_run_{test_run}')
+        scenario_path = os.path.join(path_twice, 'Scenarios', 'dynamic_ego', scenario, scenario_type, weather, radar_mode, f'test_run_{test_run}')
     else:
-        scenario_path = os.path.join(path_twice, 'TWICE', 'Scenarios', 'static_ego', scenario, scenario_type, weather, radar_mode, f'test_run_{test_run}')
+        scenario_path = os.path.join(path_twice, 'Scenarios', 'static_ego', scenario, scenario_type, weather, radar_mode, f'test_run_{test_run}')
 
     # real or synthetic data
     if scenario_type == 'real': 

@@ -1,5 +1,5 @@
-with open('TWICE_path.txt', 'r') as f:
-    path_twice = f.read()
+# with open('TWICE_path.txt', 'r') as f:
+#     path_twice = f.read()
 import math as m
 import numpy as np
 import matplotlib
@@ -18,7 +18,7 @@ import os
 import pathlib
 import pandas as pd
 from shapely.geometry import Polygon, Point
-sys.path.insert(1,os.path.join(path_twice,"TWICE","open-simulation-interface"))
+# sys.path.insert(1,os.path.join(path_twice,"TWICE","open-simulation-interface"))
 from osi3.osi_sensordata_pb2 import SensorData
 from osi3.osi_datarecording_pb2 import SensorDataSeries
 

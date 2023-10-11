@@ -1,5 +1,5 @@
-with open('TWICE_path.txt', 'r') as f:
-    path_twice = f.read()
+# with open('TWICE_path.txt', 'r') as f:
+#     path_twice = f.read()
 import google.protobuf.message
 import google.protobuf.json_format
 import numpy as np
@@ -8,7 +8,7 @@ import os
 import struct
 import open3d as o3d
 import math as m
-sys.path.insert(1,os.path.join(path_twice,"TWICE","open-simulation-interface"))
+# sys.path.insert(1,os.path.join(path_twice,"TWICE","open-simulation-interface"))
 from osi3.osi_sensordata_pb2 import SensorData
 
 

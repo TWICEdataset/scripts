@@ -1,5 +1,5 @@
-with open('TWICE_path.txt', 'r') as f:
-    path_twice = f.read()
+# with open('TWICE_path.txt', 'r') as f:
+#     path_twice = f.read()
 import math as m
 import numpy as np
 import cv2
@@ -12,7 +12,7 @@ import sys
 import struct
 import os
 import pathlib
-sys.path.insert(1,os.path.join(path_twice,"TWICE","open-simulation-interface"))
+# sys.path.insert(1,os.path.join(path_twice,"TWICE","open-simulation-interface"))
 from osi3.osi_sensordata_pb2 import SensorData
 from osi3.osi_datarecording_pb2 import SensorDataSeries
 
