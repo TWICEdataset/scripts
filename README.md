@@ -17,11 +17,18 @@ TWICE <br>
 
 # Requirements:
 1. pip install --upgrade opencv-python tqdm open3d
-2. OSI Installation - Follow instructions [available at here](https://www.asam.net/static_downloads/ASAM_OSI_reference-documentation_v3.5.0/index.html)
+2. Open simulation interface (OSI) - [Installation instructions](https://www.asam.net/static_downloads/ASAM_OSI_reference-documentation_v3.5.0/index.html)
 3. pip install --upgrade google-api-python-client
 
 ## TWICE home page
+https://twice.eletrica.ufpr.br<br>
 https://twicedataset.github.io/site
+
+## Dataset
+
+Subset with examples used in tutorial.ipynb (439 MB): [TWICEsubset.zip](https://twice.eletrica.ufpr.br/TWICEsubset.zip)<br>
+Full dataset (90 GB): [TWICE.zip](https://twice.eletrica.ufpr.br/TWICE.zip)<br>
+
 
 ## Reference
 L. Novicki Neto et al., “TWICE Dataset: Digital Twin of Test Scenarios in a Controlled Environment.” arXiv, Oct. 05, 2023. doi: 10.48550/arXiv.2310.03895.
